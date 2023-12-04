@@ -4,8 +4,8 @@
 date_default_timezone_set('America/Sao_Paulo');
 
 // https://www.mercadopago.com.br/settings/account/credentials
-$acess_token = "";
+$acess_token = "SEU_ACESS_TOKEN";
 
 // o mercadopago envia uma notifição toda vez que houver uma mudança na transação, este seria seu URL com o script para receber essa notificação
-$notification_url = ""; // ***obrigatorio***
+$notification_url = "CAMINHO_PARA_NOTIFICATION"; // ***obrigatorio***
 ?>
