@@ -4,8 +4,6 @@ include("../config.php");
 
 $paymentId = $_REQUEST['id'] ?? null;
 
-$paymentId = $_GET['id'];
-
 $curl = curl_init();
 curl_setopt_array($curl, [
     CURLOPT_URL => 'https://api.mercadopago.com/v1/payments/' . $paymentId,
@@ -28,7 +26,7 @@ $status = $response['status'];
 $valuePayment = (float) $response['transaction_amount'];
 
 if($status=="approved"){
-    file_put_contents("../transactions/$externalReference", "approved");
+    file_put_contents("../transactions/$externalReference", "approved;$paymentId");
 }
 
 echo json_encode($response);
