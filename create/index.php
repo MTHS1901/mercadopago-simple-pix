@@ -48,6 +48,22 @@ $infos = [
 $payment = array_merge(["payer" => $pagador], $infos);
 $payment = json_encode($payment);
 
+// 
+$uuid = generateUUID();
+function generateUUID()
+{
+    return sprintf(
+        '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+        mt_rand(0, 0xffff),
+        mt_rand(0, 0xffff), // 8 caracteres
+        mt_rand(0, 0xffff), // 4 caracteres
+        mt_rand(0, 0x0fff) | 0x4000, // 4 caracteres para a versão 4
+        mt_rand(0, 0x3fff) | 0x8000, // 4 caracteres para a variante
+        mt_rand(0, 0xffff),
+        mt_rand(0, 0xffff),
+        mt_rand(0, 0xffff) // 12 caracteres
+    );
+}
 
 // faz o request para o mercado pago usando CURL
 $curl = curl_init();
@@ -58,6 +74,7 @@ curl_setopt_array($curl, [
     CURLOPT_POSTFIELDS => $payment,
     CURLOPT_HTTPHEADER => [
         'Authorization: Bearer ' . $acess_token,
+        'X-Idempotency-Key: ' . $uuid,
         'Content-Type: application/json'
     ]
 ]);
