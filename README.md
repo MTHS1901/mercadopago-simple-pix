@@ -15,5 +15,5 @@ Webhook para verificar se o pagamento do pix foi realizado, o mesmo deve ser con
 ## /notification
 Neste caso não houve integração.
 
-## config.php (método burro)
+## config.php
 Token (credencial) da conta Mercado Pago e pode ser solicitado aqui: https://www.mercadopago.com.br/developers/pt/docs/your-integrations/credentials
