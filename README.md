@@ -3,17 +3,17 @@
 API para receber pagamentos via PIX pelo Mercado Pago, sistema simplificado que gera um QR CODE para pagamento.
 
 
-## create
+## /create
 Cria o pedido de pagamento e envia ao Mercado Pago, dessa forma recebe os dados para pagamento do PIX.
 
-## transactions
+## /transactions
 Pasta onde ficara registrado as transações feitas
 
-## verify
+## /verify
 Webhook para verificar se o pagamento do pix foi realizado, o mesmo deve ser consultado manualmente.
 
-## notification
+## /notification
 Neste caso não houve integração.
 
-## config
+## /config
 Token (credencial) da conta Mercado Pago e pode ser solicitado aqui: https://www.mercadopago.com.br/developers/pt/docs/your-integrations/credentials
