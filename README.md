@@ -13,7 +13,7 @@ Pasta onde ficara registrado as transações feitas
 Webhook para verificar se o pagamento do pix foi realizado, o mesmo deve ser consultado manualmente.
 
 ## notification
-Neste caso não foi integrado a minha necessidade.
+Neste caso não houve integração.
 
 ## config
 Token (credencial) da conta Mercado Pago e pode ser solicitado aqui: https://www.mercadopago.com.br/developers/pt/docs/your-integrations/credentials
