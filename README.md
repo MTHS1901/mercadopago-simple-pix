@@ -17,3 +17,6 @@ Neste caso não houve integração.
 
 ## config.php
 Token (credencial) da conta Mercado Pago e pode ser solicitado aqui: https://www.mercadopago.com.br/developers/pt/docs/your-integrations/credentials
+
+## Como usar?
+Baixe o os arquivos do repositorio, pegue a credencial no mercado pago, coloque a credencial no config.php, efetue o teste pelo index.html
