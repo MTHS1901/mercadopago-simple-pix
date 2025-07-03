@@ -10,7 +10,7 @@ Cria o pedido de pagamento e envia ao Mercado Pago, dessa forma recebe os dados 
 Pasta onde ficara registrado as transações feitas
 
 ## /verify
-Webhook para verificar se o pagamento do pix foi realizado, o mesmo deve ser consultado manualmente.
+Verificar se o pagamento do pix foi realizado, o mesmo deve ser consultado manualmente.
 
 ## /notification
 Neste caso não houve integração.
